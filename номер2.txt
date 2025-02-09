@@ -1,0 +1,33 @@
+// Пример простого логина
+const loginForm = document.getElementById("loginForm");
+
+loginForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+    
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+    
+    // Проверка логина и пароля (можно добавить свою логику)
+    if (username === "user" && password === "password") {
+        alert("Вход успешен!");
+    } else {
+        alert("Неверный логин или пароль!");
+    }
+});
+
+// Функция для загрузки фото
+function uploadImage() {
+    const fileInput = document.getElementById("fileInput");
+    const uploadedImage = document.getElementById("uploadedImage");
+    
+    const file = fileInput.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            uploadedImage.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+    } else {
+        alert("Пожалуйста, выберите фото!");
+    }
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приложение с логином и загрузкой фото</title>
+</head>
+<body>
+    <h1>Приложение с логином и загрузкой фото</h1>
+    
+    <!-- Форма для логина -->
+    <form id="loginForm">
+        <label for="username">Логин:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        
+        <button type="submit">Войти</button>
+    </form>
+    
+    <br>
+    
+    <!-- Форма для загрузки фото -->
+    <input type="file" id="fileInput" accept="image/*"><br><br>
+    <button onclick="uploadImage()">Загрузить фото</button>
+    
+    <h2>Загруженное фото:</h2>
+    <img id="uploadedImage" src="" alt="Фото не загружено" style="max-width: 300px;">
+    
+    <script src="script.js"></script>
+</body>
+</html>
